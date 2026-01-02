@@ -61,9 +61,9 @@ Config.Translate = {
 
 Config.Jobs = {
     { category = "standard", label = "iFruit Store Lieferung", model = "phantom", trailer = "trailers2", basePrice = 1200, minLevel = 1, xpReward = 200 },
-    { category = "standard", label = "GoPostal Logistik-Express", model = "mule", trailer = "trailers", basePrice = 1500, minLevel = 2, xpReward = 250 },
+    { category = "standard", label = "GoPostal Logistik-Express", model = "phantom3", trailer = "trailers", basePrice = 1500, minLevel = 2, xpReward = 250 },
     { category = "heavy", label = "YouTool Industrieteile", model = "packer", trailer = "trailerlogs", basePrice = 2500, minLevel = 3, xpReward = 450 },
-    { category = "hazmat", label = "Humane Labs Forschungsmaterial", model = "phantom3", trailer = "tanker", basePrice = 5000, minLevel = 5, xpReward = 800 }
+    { category = "hazmat", label = "Humane Labs Forschungsmaterial", model = "hauler", trailer = "tanker", basePrice = 5000, minLevel = 5, xpReward = 800 }
 }
 
 Config.DeliveryPoints = {
