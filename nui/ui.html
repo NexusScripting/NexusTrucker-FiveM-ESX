@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html style="background: transparent;">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body style="background: transparent;">
+    <div id="notify-container"></div>
+    <div id="app">
+        <div class="glass-panel">
+            <div class="sidebar">
+                <div class="header">
+                    <i class="fa-solid fa-truck-fast" style="font-size: 40px; color: #007AFF;"></i>
+                    <p style="margin-top: 10px;">TRUCK<span>CORE</span></p>
+                </div>
+                <div class="xp-container">
+                    <div class="xp-label" id="ui-rank-label">...</div>
+                    <div class="xp-label" style="margin-top: 15px;"><span id="ui-level-label">Level</span> <span id="lvl">1</span></div>
+                    <div class="xp-bar"><div id="xp-fill"></div></div>
+                </div>
+                <div class="user-profile">
+                    <p id="p-name"><i class="fa-solid fa-user-gear"></i> Loading...</p>
+                </div>
+                <button onclick="closeUI()" class="logout-btn">EXIT</button>
+            </div>
+            <div class="main">
+                <div class="stats-row">
+                    <div class="stat-card">
+                        <i class="fa-solid fa-wallet"></i>
+                        <div><p id="ui-earned-label" style="color:rgba(255,255,255,0.4);font-size:12px;margin:0;">Earned</p><h2 id="total-earned">$0</h2></div>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fa-solid fa-route"></i>
+                        <div><p id="ui-finished-label" style="color:rgba(255,255,255,0.4);font-size:12px;margin:0;">Finished</p><h2 id="total-deliveries">0</h2></div>
+                    </div>
+                </div>
+                <h1 id="ui-title-text">Freight Exchange</h1>
+                <div id="job-list" class="job-scroller"></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
