@@ -3,8 +3,6 @@ window.addEventListener('message', function(event) {
     
     if (data.type === "openUI") {
         $("#app").fadeIn(300).css("display", "flex");
-        
-        // Zuweisung der UI-Texte aus der Config (Verhindert 'undefined')
         $("#ui-title-text").text(data.lang.ui_title);
         $("#ui-earned-label").text(data.lang.ui_earned);
         $("#ui-finished-label").text(data.lang.ui_finished);
@@ -12,7 +10,6 @@ window.addEventListener('message', function(event) {
         $("#ui-level-label").text(data.lang.ui_level);
         $(".logout-btn").html(`<i class="fa-solid fa-power-off"></i> ${data.lang.ui_exit}`);
 
-        // Spieler-Statistiken
         $("#p-name").html(`<i class="fa-solid fa-user-gear"></i> ${data.playerName}`);
         $("#lvl").text(data.stats.level);
         
@@ -24,11 +21,9 @@ window.addEventListener('message', function(event) {
         $("#total-earned").text("$" + (data.stats.total_money || 0).toLocaleString());
         $("#total-deliveries").text(data.stats.total_deliveries || 0);
         
-        // XP Progress Bar Berechnung
         let progress = (data.stats.xp / (data.stats.level * 1500)) * 100;
         $("#xp-fill").css("width", progress + "%");
         
-        // Job-Liste generieren
         let html = "";
         data.jobs.forEach((job, i) => {
             const isLocked = data.stats.level < job.minLevel;
@@ -46,7 +41,6 @@ window.addEventListener('message', function(event) {
         $("#job-list").html(html);
 
     } else if (data.type === "notify") {
-        // Standalone Notification System
         const id = "notif_" + Math.random().toString(36).substr(2, 9);
         $("#notify-container").append(`<div id="${id}" class="notify-card ${data.ntype}">${data.message}</div>`);
         

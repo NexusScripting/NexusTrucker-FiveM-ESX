@@ -13,8 +13,7 @@ Config.SpawnPoints = {
 
 Config.Translate = {
     ["Deutsch"] = {
-        -- UI Texte (Das behebt das "undefined")
-        ui_title = "Frachtbörse",
+        ui_title = "Zentrale",
         ui_earned = "Verdient",
         ui_finished = "Fahrten",
         ui_rank = "Rang",
@@ -22,11 +21,9 @@ Config.Translate = {
         ui_exit = "VERLASSEN",
         ui_accept = "Wählen",
         ui_locked = "Gesperrt",
-        -- Ränge
         rank_1 = "Lehrling",
         rank_2 = "Profi",
         rank_3 = "Logistik-Legende",
-        -- Benachrichtigungen
         help_open = "Drücke ~INPUT_CONTEXT~",
         n_start = "Auftrag gestartet! Fahre zum Ziel.",
         n_error_trailer = "Anhänger verloren! Koppel ihn wieder an.",
@@ -37,7 +34,7 @@ Config.Translate = {
         n_perfect = "Volle Auszahlung erhalten!"
     },
     ["English"] = {
-        ui_title = "Freight Exchange",
+        ui_title = "Control Center",
         ui_earned = "Earned",
         ui_finished = "Finished",
         ui_rank = "Rank",
